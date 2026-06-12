@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "home_team": "Зенит",
+    "away_team": "Спартак",
+    "date": "2026-06-20",
+    "stadium": "Газпром Арена",
+    "status": "scheduled",
+    "home_score": null,
+    "away_score": null
+  },
+  {
+    "id": 2,
+    "home_team": "Краснодар",
+    "away_team": "Зенит",
+    "date": "2026-06-25",
+    "stadium": "Краснодар",
+    "status": "finished",
+    "home_score": 2,
+    "away_score": 1
+  },
+  {
+    "id": 3,
+    "home_team": "Спартак",
+    "away_team": "Краснодар",
+    "date": "2026-07-01",
+    "stadium": "Лукойл Арена",
+    "status": "scheduled",
+    "home_score": null,
+    "away_score": null
+  }
+]

@@ -1,0 +1,33 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: football-league-api-deployment
+  namespace: football
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: football-league-api
+  template:
+    metadata:
+      labels:
+        app: football-league-api
+    spec:
+      containers:
+        - name: football-league-api
+          image: 77lev77/football-league-api:latest
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 8000
+          readinessProbe:
+            httpGet:
+              path: /health
+              port: 8000
+            initialDelaySeconds: 5
+            periodSeconds: 10
+          livenessProbe:
+            httpGet:
+              path: /health
+              port: 8000
+            initialDelaySeconds: 15
+            periodSeconds: 20
